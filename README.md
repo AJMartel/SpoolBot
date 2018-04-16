@@ -1,4 +1,4 @@
-![spoolbot](https://raw.githubusercontent.com/pcotret/SpoolBot/master/img/spoolbot.png)
+![spoolbot](https://raw.githubusercontent.com/AJMartel/SpoolBot/master/img/spoolbot.png)
 # How to create a filament counter for a 3D printer for a few bucks
 ### Vladimir Béraud-Peigné, Eric Gastineau, Marie Xérès
 CentraleSupélec, Rennes campus, 2016/2017
@@ -6,7 +6,7 @@ CentraleSupélec, Rennes campus, 2016/2017
 This project has been realized by Vladimir Béraud-Peigné, Eric Gastineau and Marie Xérès (1st year students 16/17 at CentraleSupélec, Rennes campus) for a short-term project under the supervision of Dr. Pascal Cotret.
 
 ## Goals of this project
-![k8400](https://raw.githubusercontent.com/pcotret/SpoolBot/master/img/k8400.jpg)
+![k8400](https://raw.githubusercontent.com/AJMartel/SpoolBot/master/img/k8400.jpg)
 Well, the basic idea of this project came from a little problem. We have a small fablab room with a Velleman K8400 3D printer. Unfortunately, this printer does not have a filament counter:
 
 * We cannot know exactly how much filament has been used (in terms of length).
@@ -20,7 +20,7 @@ By browsing the Internet, we found a cool solution: https://www.hackster.io/bins
 However, as this is a student project, the idea was not only to follow a tutorial but to understand how such a project can be achieved. This tutorial will show how we built our own SpoolBot!
 
 ## How does a mechanical mouse work?
-![souris](https://raw.githubusercontent.com/pcotret/SpoolBot/master/img/mymouse.png)
+![souris](https://raw.githubusercontent.com/AJMartel/SpoolBot/master/img/mymouse.png)
 
 A good old computer mouse is based on a ball causing the rotation of a small cylinder.This cylinder has an encoder wheel (drilled with several holes) at one of its ends. This wheel is placed between a phototransistor and a LED: counting pulses received by the phototransistor can be used to measure the distance traveled by the mouse ball.
 
@@ -34,11 +34,11 @@ By default, a PS/2 computer mouse works with a 200 CPI (*Counts Per Inch*) resol
 
 Transmitted data is based on 8-bit words (see diagram below), with a start bit (set to 0) as a preamble. Data words are ended by a parity bit and a stop bit (set to 1). The whole message is coded on 11 bits.
 
-![ps2](https://raw.githubusercontent.com/pcotret/SpoolBot/master/img/timing1.png)
+![ps2](https://raw.githubusercontent.com/AJMartel/SpoolBot/master/img/timing1.png)
 
 The mouse transmits information in 3 frames spaced by 350 µs: frames are 3.6ms long and are spaced by 6.4ms at least. As a consequence, the mouse is able to transmit up to 100 frames per second.
 
-![full](https://raw.githubusercontent.com/pcotret/SpoolBot/master/img/ps2_frame.png)
+![full](https://raw.githubusercontent.com/AJMartel/SpoolBot/master/img/ps2_frame.png)
 
 The first frame word contains the following information:
 
@@ -95,18 +95,18 @@ char mouse_read(void)
 ```
 
 ## SpoolBot solution
-![full](https://raw.githubusercontent.com/pcotret/SpoolBot/master/img/full_stuff.png)
+![full](https://raw.githubusercontent.com/AJMartel/SpoolBot/master/img/full_stuff.png)
 
 ### Arduino code
-See https://github.com/pcotret/SpoolBot/blob/master/docs/spoolbot_code/spoolbot_code.ino
+See https://github.com/AJMartel/SpoolBot/blob/master/docs/spoolbot_code/spoolbot_code.ino
 
 ### Wiring diagram
-You can also find it at https://github.com/pcotret/SpoolBot/blob/master/docs/fritzing_spoolbot.fzz
+You can also find it at https://github.com/AJMartel/SpoolBot/blob/master/docs/fritzing_spoolbot.fzz
 ![fritzing](https://raw.githubusercontent.com/pcotret/SpoolBot/master/img/wiring.png)
 
 ### 3D-printed case
 To be completed, we need to fix a few things on 3D files.
-![solidworks](https://raw.githubusercontent.com/pcotret/SpoolBot/master/img/boitier.png)
+![solidworks](https://raw.githubusercontent.com/AJMartel/SpoolBot/master/img/boitier.png)
 
 ## Demonstration video
 [![hello](https://img.youtube.com/vi/5DotnpfB1dM/0.jpg)](https://www.youtube.com/watch?v=5DotnpfB1dM)
